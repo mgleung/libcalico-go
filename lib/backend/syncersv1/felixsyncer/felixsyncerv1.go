@@ -56,7 +56,8 @@ func New(client api.Client, callbacks api.SyncerCallbacks) api.Syncer {
 			UpdateProcessor: updateprocessors.NewFelixNodeUpdateProcessor(),
 		},
 		{
-			ListInterface: model.ResourceListOptions{Kind: apiv2.KindProfile},
+			ListInterface:   model.ResourceListOptions{Kind: apiv2.KindProfile},
+			UpdateProcessor: updateprocessors.NewProfileUpdateProcessor(),
 		},
 		{
 			ListInterface:   model.ResourceListOptions{Kind: apiv2.KindWorkloadEndpoint},
